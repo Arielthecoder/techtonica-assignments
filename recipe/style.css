@@ -48,10 +48,12 @@ div .checked {
   cursor: pointer;
 }
 
-.stars .stars {
+.stars .star {
   color: #ccc;
+  display: inline-block;
 }
 
-.recipe-rating .star.active {
+.recipe-rating .star.active,
+.recipe-rating .star:hover {
   color: gold;
 }

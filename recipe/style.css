@@ -43,3 +43,15 @@ div .checked {
   display: block;
 }
 
+.stars {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.stars .stars {
+  color: #ccc;
+}
+
+.recipe-rating .star.active {
+  color: gold;
+}

@@ -27,4 +27,12 @@ body {
   div .checked {
     text-decoration: line-through;
   }
+
+  .toggle-content {
+    display: none;
+  }
+
+  .toggle-content.show {
+    display: block;
+  }
   

@@ -3,11 +3,13 @@ img {
     
 }
 
+
 @media(max-width: 1080px){
     img {
         width: 100%
     }
 }
+
 
 body {
     animation: color-change 20s infinite;
@@ -21,3 +23,8 @@ body {
     75% {background-color: #FDC360 ;}
     100% {background-color: #FEB130;}
   }
+  
+  div .checked {
+    text-decoration: line-through;
+  }
+  

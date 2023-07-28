@@ -1,40 +1,14 @@
-img {
-  width: 20%;
-  height: 20%;
-}
-/* Add these CSS styles to your existing style.css file */
-
-.container {
-  display: flex;
-  gap: 10px; /* Add some gap between the left and right sections */
-  justify-content: center; /* Center the content horizontally */
-}
-
-/* The rest of your existing CSS styles here */
-
-.center-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
 
-.left,
-.right {
-  flex: 1; /* Make both the left and right sections take equal space */
-}
-
-
-/* Body styles */
 body {
   font-family: 'Helvetica', Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  animation: color-change 20s infinite;
+  background-color: #faf8ee;
 }
 
-/* Heading styles */
 h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 36px;
@@ -49,33 +23,71 @@ h2 {
   margin: 16px 0;
 }
 
-/* Paragraph styles */
 p {
   font-size: 16px;
   margin: 10px 0;
 }
 
-/* Image styles */
+a {
+  color:#b388d7 ;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 img {
+  width: 20%;
+  height: 20%;
   max-width: 100%;
   height: auto;
 }
 
-/* Ingredient list styles */
+
+.container {
+  display: flex;
+  gap: 0px; 
+  justify-content: center;
+}
+
+
+.left,
+.right {
+  flex: 1; 
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+
+
+
 .left div {
   margin: 8px 0;
 }
 
-/* Directions list styles */
-.right ol {
-  padding-left: 20px;
+.left h2, .right h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 16px 0;
 }
 
-.right ol li {
-  margin: 8px 0;
+
+.directions-section {
+  margin-bottom: 0px;
+}
+.ingredients{
+  margin-left: 0%;
+  margin-bottom: 0%;
 }
 
-/* Recipe rating styles */
 .recipe-rating {
   margin: 20px 0;
 }
@@ -89,17 +101,7 @@ img {
   font-size: 16px;
 }
 
-/* Link styles */
-a {
-  color: #007BFF;
-  text-decoration: none;
-}
 
-a:hover {
-  text-decoration: underline;
-}
-
-/* Toggle button styles */
 .toggle-button {
   background-color: #b388d7;
   color: white;
@@ -109,46 +111,20 @@ a:hover {
   cursor: pointer;
 }
 
-/* Toggle content styles */
 .toggle-content {
-  margin-top: 20px;
+  display: none;
 }
 
-/* Video credits styles */
+.toggle-content.show {
+  display: block;
+}
+
+
 .toogle-content p {
   font-size: 14px;
   color: #555;
 }
 
-/* Other carrot juice recipes styles */
-.right ol {
-  padding-left: 20px;
-}
-
-.right ol li {
-  margin: 8px 0;
-}
-
-/* Add these styles for centering */
-.center-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-
-@media (max-width: 900px) {
-  img {
-    width: 20%;
-  }
-}
-
-body {
-  animation: color-change 20s infinite;
-  background-color: #faf8ee;
-}
 
 @keyframes color-change {
   0% {
@@ -168,17 +144,11 @@ body {
   }
 }
 
+
 div .checked {
   text-decoration: line-through;
 }
 
-.toggle-content {
-  display: none;
-}
-
-.toggle-content.show {
-  display: block;
-}
 
 .stars {
   font-size: 30px;
@@ -199,7 +169,13 @@ div .checked {
   color: #b388d7;
 }
 
-
 .stars .star:hover {
   color: #b388d7;
+}
+
+
+@media (max-width: 900px) {
+  img {
+    width: 20%;
+  }
 }

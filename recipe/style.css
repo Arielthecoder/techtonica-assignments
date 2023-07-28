@@ -1,6 +1,107 @@
 img {
   width: 32%;
 }
+/* Body styles */
+body {
+  font-family: 'Helvetica', Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Heading styles */
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 16px 0;
+}
+
+/* Paragraph styles */
+p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* Image styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ingredient list styles */
+.left div {
+  margin: 8px 0;
+}
+
+/* Directions list styles */
+.right ol {
+  padding-left: 20px;
+}
+
+.right ol li {
+  margin: 8px 0;
+}
+
+/* Recipe rating styles */
+.recipe-rating {
+  margin: 20px 0;
+}
+
+.stars .star {
+  font-size: 36px;
+}
+
+.recipe-rating p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Link styles */
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Toggle button styles */
+.toggle-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Toggle content styles */
+.toggle-content {
+  margin-top: 20px;
+}
+
+/* Video credits styles */
+.toogle-content p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Other carrot juice recipes styles */
+.right ol {
+  padding-left: 20px;
+}
+
+.right ol li {
+  margin: 8px 0;
+}
+
 
 @media (max-width: 1080px) {
   img {
@@ -55,5 +156,14 @@ div .checked {
 
 .recipe-rating .star.active,
 .recipe-rating .star:hover {
+  color: gold;
+}
+
+.stars .star.active {
+  color: gold;
+}
+
+
+.stars .star:hover {
   color: gold;
 }

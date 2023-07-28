@@ -1,32 +1,20 @@
 const domLoaded = () => {
+  const boxes = document.querySelectorAll("input[type=checkbox]");
+  boxes.forEach(checkbox => {
+    checkbox.addEventListener("click", crossOut);
+  });
+};
 
-    const boxes = document.querySelectorAll("input[type=checkbox]");
-  
-    boxes.forEach(checkbox => {
-      checkbox.addEventListener("click", crossOut)
-    });
-  
-  } 
-  
-  function crossOut(event) {
-    const checkbox = event.target;
-    const parentLabel = checkbox.parentElement;
-    parentLabel.classList.toggle("checked", checkbox.checked);
-  }
-  
-  document.addEventListener('DOMContentLoaded', domLoaded);
-  
-  const toggleButton = document.getElementById("toggle-button");
-  const toggleContent = document.getElementById("toggle-content");
-  
-  toggleButton.addEventListener("click", () => {
-    toggleContent.classList.toggle("show");
-  })
+function crossOut(event) {
+  const checkbox = event.target;
+  const parentLabel = checkbox.parentElement;
+  parentLabel.classList.toggle("checked", checkbox.checked);
+}
 
-  
+document.addEventListener('DOMContentLoaded', domLoaded);
 
-const stars = document.querySelectorAll('.star');
-const ratingMessage = document.querySelector('.recipe-rating p');
+const stars = document.querySelectorAll('.recipe-rating .star');
+const ratingMessage = document.getElementById('rating-message');
 
 let selectedRating = 0;
 
@@ -46,12 +34,8 @@ stars.forEach((star, index) => {
   });
 });
 
-function updateStars(index) {
+function updateStars(index = selectedRating - 1) {
   stars.forEach((star, i) => {
-    if (i <= index) {
-      star.classList.add('active');
-    } else {
-      star.classList.remove('active');
-    }
+    star.classList.toggle('active', i <= index);
   });
 }

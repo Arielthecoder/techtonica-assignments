@@ -1,6 +1,31 @@
 img {
-  width: 32%;
+  width: 20%;
+  height: 20%;
 }
+/* Add these CSS styles to your existing style.css file */
+
+.container {
+  display: flex;
+  gap: 10px; /* Add some gap between the left and right sections */
+  justify-content: center; /* Center the content horizontally */
+}
+
+/* The rest of your existing CSS styles here */
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.left,
+.right {
+  flex: 1; /* Make both the left and right sections take equal space */
+}
+
+
 /* Body styles */
 body {
   font-family: 'Helvetica', Arial, sans-serif;
@@ -11,12 +36,14 @@ body {
 
 /* Heading styles */
 h1 {
+  font-family: 'Dancing Script', cursive;
   font-size: 36px;
   font-weight: bold;
   margin: 20px 0;
 }
 
 h2 {
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 28px;
   font-weight: bold;
   margin: 16px 0;
@@ -74,7 +101,7 @@ a:hover {
 
 /* Toggle button styles */
 .toggle-button {
-  background-color: #007BFF;
+  background-color: #b388d7;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -102,10 +129,19 @@ a:hover {
   margin: 8px 0;
 }
 
+/* Add these styles for centering */
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
 
-@media (max-width: 1080px) {
+
+@media (max-width: 900px) {
   img {
-    width: 100%;
+    width: 20%;
   }
 }
 
@@ -156,14 +192,14 @@ div .checked {
 
 .recipe-rating .star.active,
 .recipe-rating .star:hover {
-  color: gold;
+  color: #b388d7;
 }
 
 .stars .star.active {
-  color: gold;
+  color: #b388d7;
 }
 
 
 .stars .star:hover {
-  color: gold;
+  color: #b388d7;
 }

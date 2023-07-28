@@ -1,5 +1,3 @@
-
-
 body {
   font-family: 'Helvetica', Arial, sans-serif;
   line-height: 1.6;
@@ -29,7 +27,7 @@ p {
 }
 
 a {
-  color:#b388d7 ;
+  color: #b388d7;
   text-decoration: none;
 }
 
@@ -47,14 +45,14 @@ img {
 
 .container {
   display: flex;
-  gap: 0px; 
+  gap: 0px;
   justify-content: center;
 }
 
 
 .left,
 .right {
-  flex: 1; 
+  flex: 1;
 }
 
 .center-content {
@@ -72,7 +70,8 @@ img {
   margin: 8px 0;
 }
 
-.left h2, .right h2 {
+.left h2,
+.right h2 {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 24px;
   font-weight: bold;
@@ -83,7 +82,8 @@ img {
 .directions-section {
   margin-bottom: 0px;
 }
-.ingredients{
+
+.ingredients {
   margin-left: 0%;
   margin-bottom: 0%;
 }
@@ -130,15 +130,19 @@ img {
   0% {
     background-color: #faf8ee;
   }
+
   25% {
     background-color: #fbe6bf;
   }
+
   50% {
     background-color: #fcd48f;
   }
+
   75% {
     background-color: #fdc360;
   }
+
   100% {
     background-color: #feb130;
   }

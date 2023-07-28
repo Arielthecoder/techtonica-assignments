@@ -16,3 +16,9 @@ const domLoaded = () => {
   
   document.addEventListener('DOMContentLoaded', domLoaded);
   
+const toggleButton = document.querySelector('.toggle-button');
+const toggleContent = document.querySelector('.toggle-content');
+
+toggleButton.addEventListener('click', () => {
+  toggleContent.classList.toggle('show');
+})

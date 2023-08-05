@@ -13,7 +13,7 @@ body, h1, h2, h3, p, ul {
   
  
   img {
-    border: 5px solid black; 
+    border: 5px solid pink; 
     max-width: 100%;
     height: auto;
     display: block;

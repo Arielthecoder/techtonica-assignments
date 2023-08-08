@@ -4,7 +4,21 @@ class Event {
       this.description = description;
       this.availableTickets = [];
     }
+    addAvailableTickets(ticketType, price) {
+        this.availableTickets.push({type: ticketType, price:price});
+      }
+
+      allTickets(){
+        for(let i = 0; i < this.availableTickets.length; i ++){
+          return `All tickets: ${i+1}. ${this.availableTickets[i].type} 
+          ($${this.availableTickets[i].price})`
+        }
+      }
   }
+
+
+
+
   // The below statement creates an object.
 const eventObj1 = new Event(
     'KLOS Golden Gala',
@@ -29,10 +43,30 @@ document.addEventListener('DOMContentLoaded', () => {
 class TicketType {
     constructor(name, price){
     this.name = name;
-    this.price = price 
+    this.price = price
+     }
    
-    function addAvailableTickets(ticketName, ticketPrice){
-        availableTickets.push(ticketName,ticketPrice)
-    }
-}}
+}
 
+        
+
+ eventObj1.addAvailableTickets("human", 299);
+ eventObj1.addAvailableTickets("vampire", 99);
+eventObj2.addAvailableTickets("General Admission", 25)
+eventObj2.addAvailableTickets("Floor Seating", 80)
+eventObj3.addAvailableTickets("Orchestra", 300)
+eventObj3.addAvailableTickets("Mezzanine", 200)
+eventObj3.addAvailableTickets("Balcony", 100)
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Handler when the DOM is fully loaded
+  let html = '';
+  eventArray.forEach((item) => {
+    html += `<li>${item.name} - ${item.description} - ${item.allTickets()}`;
+  });
+  document.querySelector('#event').innerHTML = html;
+});
+
+eventArray.forEach((item) => {
+  console.log(`${item.name} - ${item.description} - ${item.allTickets()}`)
+})

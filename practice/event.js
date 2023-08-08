@@ -26,3 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     document.querySelector('#event').innerHTML = html;
   });
+class TicketType {
+    constructor(name, price){
+    this.name = name;
+    this.price = price 
+   
+    function addAvailableTickets(ticketName, ticketPrice){
+        availableTickets.push(ticketName,ticketPrice)
+    }
+}}
+

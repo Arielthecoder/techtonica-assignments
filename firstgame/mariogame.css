@@ -5,5 +5,8 @@
 body {
     font-family: slantFont;
     text-align: center;
-    color: #39ff14
+    color: #39ff14;
+    background: url("./mario5.jpg");
+
 }
+

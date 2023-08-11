@@ -30,3 +30,8 @@ body {
  background-image: url("./pipe.png");
  background-size: cover;
 }
+
+#gamearea div img{
+    width: 100px ;
+    height: 100px;
+}

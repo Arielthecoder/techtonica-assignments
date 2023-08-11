@@ -1,4 +1,5 @@
 let currMole;
+let currPlant;
 
 window.onload = function() {
     setStart();
@@ -10,7 +11,8 @@ function setStart() {
         tile.id = i.toString();
         document.getElementById("gamearea").appendChild(tile);
     }
-    setInterval(moveMole, 2000)
+    setInterval(moveMole, 1000)
+    setInterval(movePlant, 2000)
 }
 function randomTiles(){
     let num = Math.floor(Math.random()*9);
@@ -25,6 +27,25 @@ function moveMole(){
     mole.src = "./mole.png";
 
     let num = randomTiles();
+    if (currPlant && currPlant.id == num){
+        return
+    }
     currMole = document.getElementById(num);
     currMole.appendChild(mole);
+}
+
+function movePlant(){
+    if (currPlant){
+        currPlant.innerHTML = ""
+    }
+
+    let plant = document.createElement("img");
+    plant.src = "./plant.png";
+
+    let num = randomTiles();
+    if (currMole && currMole.id == num){
+        return
+    }
+    currPlant = document.getElementById(num);
+    currPlant.appendChild(plant);
 }

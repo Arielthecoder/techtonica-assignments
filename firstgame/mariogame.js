@@ -1,7 +1,7 @@
 let currMole;
 let currPlant;
 let score = 0;
-let gameOver = false
+let gameOver = false;
 
 window.onload = function() {
     setStart();
@@ -14,11 +14,11 @@ function setStart() {
         tile.addEventListener("click", clickedTile);
         document.getElementById("gamearea").appendChild(tile);
     }
-    setInterval(moveMole, 1000)
-    setInterval(movePlant, 2000)
+    setInterval(moveMole, 1000);
+    setInterval(movePlant, 2000);
 }
 function randomTiles(){
-    let num = Math.floor(Math.random()*9)
+    let num = Math.floor(Math.random()*9);
     return num.toString();
 }
 
@@ -34,7 +34,7 @@ function moveMole(){
 
     let num = randomTiles();
     if (currPlant && currPlant.id == num){
-        return
+        return;
     }
     currMole = document.getElementById(num);
     currMole.appendChild(mole);
@@ -55,7 +55,7 @@ function movePlant(){
 
     let num = randomTiles();
     if (currMole && currMole.id == num){
-        return
+        return;
     }
     
     currPlant = document.getElementById(num);

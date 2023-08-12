@@ -18,7 +18,7 @@ function setStart() {
     setInterval(movePlant, 2000)
 }
 function randomTiles(){
-    let num = Math.floor(Math.random()*9);
+    let num = Math.floor(Math.random()*9)
     return num.toString();
 }
 

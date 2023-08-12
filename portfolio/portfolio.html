@@ -1,14 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
-<script src="script.js"></script>
-</html>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ariel's Portfolio</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arsenal&family=Prata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-7eAFjCr/yqb1nLw5HAd7TSBlA2L5Zj0bHPpmeT6wQrOpVV3Vl1+XUN0AdATgOrdbC4pSyHeQZ6cnhTExGy2tA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <header>
+      <h1>Ariel Hermitt</h1>
+      <p>I am a Software Engineer in Training. Excited to be on this journey of learning. I have moderate experience in
+        Git, Github, Javascript, CSS and HTML.</p>
+    </header>
+
+    <div class="container">
+      <div class="content">
+        <section>
+          <h2>Coding Experience</h2>
+          <ul>
+            <li>
+              <a href="https://github.com/Arielthecoder/techtonica-assignments/tree/main">Project 1</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="content">
+          <h2>Work Experience</h2>
+          <ul>
+            <li>Pharmacy Technician</li>
+            <li>Server</li>
+            <li>Software Engineering Apprenticeship</li>
+          </ul>
+
+          <aside>
+            <h2>Image Section</h2>
+            <img
+              src="https://media.licdn.com/dms/image/D4D03AQGyipRoyfDPBw/profile-displayphoto-shrink_800_800/0/1676675986521?e=1696464000&v=beta&t=DOTOAQ7TCaGJ_wUeIk5V9fizmz08Xxj7vZl_UhfyOIg"
+              alt="Black woman with curled hair">
+          </aside>
+      </div>
+
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          Hey! My name is Ariel and I love coding. I learned about programming after taking an Intro to Computer Science
+          course and I've been programming ever since!
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <form>
+          <label for="name">Name*</label>
+          <input type="text" id="name" required>
+
+          <label for="email">Email*</label>
+          <input type="email" id="email" required>
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone">
+
+          <label for="address">Address</label>
+          <input type="text" id="address">
+
+          <input type="submit" value="Submit">
+        </form>
+      </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

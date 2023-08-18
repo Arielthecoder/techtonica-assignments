@@ -2,11 +2,55 @@
     font-family: slantFont;
     src: url(fonts/StreamerSlantDemo-WyrX4.otf);
 }
+
 body {
     font-family: slantFont;
     text-align: center;
     color: #39ff14;
     background: url("./mario5.jpg");
-
 }
 
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #39ff14;
+}
+
+p {
+    font-family: fantasy;
+    font-style: bold;
+    text-align: center;
+    color: #39ff14;
+}
+
+#gamearea {
+    width: 540px;
+    height: 540px;
+
+    background: url("./soil.png");
+    background-size: cover;
+    border: 3px #39ff14;
+    border-radius: 25px;  
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#gamearea div {
+ width: 180px;
+ height: 180px;
+ background-image: url("./pipe.png");
+ background-size: cover;
+}
+
+#gamearea div img{
+    width: 100px ;
+    height: 100px;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}

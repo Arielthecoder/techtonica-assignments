@@ -39,7 +39,6 @@ const BOOKS = [{
     "title": "Harry Potter and the Deathly Hallows",
     "author": "J.K. Rowling",
     "format": "Hardcover"
-},
-]
+}]
 
  export default BOOKS;

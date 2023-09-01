@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import BOOKS from "./books.js";
+import path from "path"
 
 
 const app = express();
@@ -8,12 +9,18 @@ const PORT = 5000;
 
 app.use(cors());
 
-app.get("/api/books", (req, res) => 
-{
+const _dirname = path.resolve();
+
+app.get('/', (req, res) => {
+    console.log('home page');
+    res.send("Hi I'm Ari.");
+})
+app.get("/books", (req, res) => 
+{   console.log(BOOKS)
     res.json(BOOKS)
 })
 
-app.get("/api/books/:id", (req, res) => {
+app.get("/books/:id", (req, res) => {
     const {id} = req.params;
 
     const neededBook = BOOKS.find(book => book.ID === id)
@@ -24,7 +31,7 @@ app.get("/api/books/:id", (req, res) => {
     }
 })
 
-app.post("api/books/posts", (req, res) => {
+app.post("/books/posts", (req, res) => {
     const newBook = {
         ID: "8",
         title: "Diary of a Wimpy Kid",
@@ -34,7 +41,7 @@ app.post("api/books/posts", (req, res) => {
     BOOKS.push(newBook);
     res.status(200).json({ message: "You've added a new book!", book: newBook});
 })
-app.delete("api/books/:id", (req, res) => {
+app.delete("/books/:id", (req, res) => {
     const {id} = req.params;
 
     const bookIndex = BOOKS.findIndex(book => book.ID === id)

@@ -13,4 +13,8 @@ app.get("/api/books", (req, res) =>
     res.json(BOOKS)
 })
 
+app.get("/api/books/:id", (req, res) => {
+    const {id} = req.params;
+})
+
 app.listen(PORT, () => console.log("server running on PORT 5000")) 

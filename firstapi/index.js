@@ -39,7 +39,7 @@ app.post("/books/posts", (req, res) => {
         format: "Hardcover"
     };
     BOOKS.push(newBook);
-    res.status(200).json({ message: "You've added a new book!", book: newBook});
+    res.status(200).json({ message: "You've added a new book.", book: newBook});
 })
 app.delete("/books/:id", (req, res) => {
     const {id} = req.params;

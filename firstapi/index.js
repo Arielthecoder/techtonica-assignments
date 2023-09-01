@@ -34,5 +34,15 @@ app.post("api/books/posts", (req, res) => {
     BOOKS.push(newBook);
     res.status(200).json({ message: "You've added a new book!", book: newBook});
 })
+app.delete("api/books/:id", (req, res) => {
+    const {id} = req.params;
 
+    const bookIndex = BOOKS.findIndex(book => book.ID === id)
+    if(bookIndex !== -1){
+        BOOKS.splice(bookIndex,1)
+        res.status(200).json({ message: "You've deleted the book."});
+    }else{
+        res.status(404).send(`The book does not exist.`)
+    }
+})
 app.listen(PORT, () => console.log("server running on PORT 5000")) 

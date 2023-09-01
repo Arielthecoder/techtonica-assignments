@@ -27,7 +27,7 @@ app.get("/books/:id", (req, res) => {
     if(neededBook){
         res.json(neededBook)
     }else{
-        res.status(404).send("Sorry I don't have that book, please choose a different one.")
+        res.status(404).send("Sorry I don't have that book, please choose something else.")
     }
 })
 

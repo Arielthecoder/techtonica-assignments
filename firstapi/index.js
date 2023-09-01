@@ -24,5 +24,13 @@ app.get("/api/books/:id", (req, res) => {
     }
 })
 
+app.post("api/books/posts", (req, res) => {
+    const newBook = {
+        ID: "8",
+        title: "Diary of a Wimpy Kid",
+        author: "Jeff Kinney",
+        format: "Hardcover"
+    };
+})
 
 app.listen(PORT, () => console.log("server running on PORT 5000")) 

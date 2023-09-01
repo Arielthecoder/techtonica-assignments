@@ -31,6 +31,8 @@ app.post("api/books/posts", (req, res) => {
         author: "Jeff Kinney",
         format: "Hardcover"
     };
+    BOOKS.push(newBook);
+    res.status(200).json({ message: "You've added a new book!", book: newBook});
 })
 
 app.listen(PORT, () => console.log("server running on PORT 5000")) 

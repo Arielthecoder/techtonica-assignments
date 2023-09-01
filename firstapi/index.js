@@ -49,7 +49,7 @@ app.delete("/books/:id", (req, res) => {
         BOOKS.splice(bookIndex,1)
         res.status(200).json({ message: "You've deleted the book!"});
     }else{
-        res.status(404).send(`The book does not exist.`)
+        res.status(404).send(`The book doesn't exist.`)
     }
 })
 app.listen(PORT, () => console.log("server running on PORT 5000")) 

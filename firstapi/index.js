@@ -15,6 +15,8 @@ app.get("/api/books", (req, res) =>
 
 app.get("/api/books/:id", (req, res) => {
     const {id} = req.params;
+
+    const neededBook = BOOKS.find(book => book.ID === id)
 })
 
 app.listen(PORT, () => console.log("server running on PORT 5000")) 
